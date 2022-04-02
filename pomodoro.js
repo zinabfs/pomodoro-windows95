@@ -9,6 +9,7 @@ const startBtn = document.getElementById('btnStart');
 const pauseBtn = document.getElementById('btnPause');
 const resetBtn = document.getElementById('btnReset');
 const pomodoro = document.getElementById('pomodoro');
+const pomoStatus = document.querySelector(".pomo-status");
 const shortBreakBtn = document.getElementById('short-break');
 let pomodoroInput, shortBreakInput, longBreakInput;
 const longBreakBtn = document.getElementById('long-break');
@@ -86,18 +87,21 @@ pomodoro.addEventListener("click",()=>{
     stopInterval();
     startTimer=undefined;
     displayTimer(status);
+    pomoStatus.innerHTML = "pomodoro";
 })
 shortBreakBtn.addEventListener("click",()=>{
     status=1;
     stopInterval();
     startTimer=undefined;
     displayTimer(status);
+    pomoStatus.innerHTML = "short break";
 })
 longBreakBtn.addEventListener("click",()=>{
     status=2;
     stopInterval();
     startTimer=undefined;
     displayTimer(status);
+    pomoStatus.innerHTML = "long break";
 })
 
 function getValues(){

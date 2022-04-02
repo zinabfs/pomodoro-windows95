@@ -3,32 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <title>pomodoro</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<div class="cloud-animation">
+    <div class="n1">
+        <div class="cloud"></div>
+    </div>
+    <div class="n2">
+        <div class="cloud"></div>
+    </div>
+    <div class="n3">
+        <div class="cloud"></div>
+    </div>
+    <div class="n4">
+        <div class="cloud"></div>
+    </div>
+    <div class="n5">
+        <div class="cloud"></div>
+    </div>
+</div>
 
-<button id="pomodoro">Pomodoro</button>
-<button id="short-break">Short break</button>
-<button id="long-break">Long break</button>
+<div class="pomo-container">
 
-<p id="timer"></p>
-<button id="btnStart">Start</button>
-<button id="btnPause">Pause</button>
-<button id="btnReset">Reset</button>
+    <div class="pomo-title">
 
-<br>
+        <div class="pomo-status">
+            pomodoro
+        </div>
+        <div class="btn hide">_</div>
+        <div class="btn open">&#9633;</div>
+        <div class="btn close">X</div>
 
-<label for="pomo">Pomodoro</label>
-<input type="number" name="pomo" id="pomo"  min="0" max="180" value="25">
+    </div>
 
-<label for="shortbreak">Short break</label>
-<input type="number" name="shortbreak" id="shortbreak"  min="0" max="180" value="05">
 
-<label for="longbreak">Long break</label>
-<input type="number" name="longbreak" id="longbreak"  min="0" max="180" value="15">
+    <div class="pomo-options">
+        <button id="pomodoro"><span>P</span>omodoro</button>
+        <button id="short-break"><span>S</span>hort break</button>
+        <button id="long-break"><span>L</span>ong break</button>
+    </div>
 
-<button id="btnTest">Test</button>
+    <div class="pomo-body">
 
+        <p id="timer"></p>
+
+        <div class="btn-timer">
+            <button id="btnStart">Start</button>
+            <button id="btnPause">Pause</button>
+            <button id="btnReset">Reset</button>
+        </div>
+    </div>
+
+</div>
+
+
+<!--<label for="pomo">Pomodoro</label>-->
+<!--<input type="number" name="pomo" id="pomo"  min="0" max="180" value="25">-->
+
+<!--<label for="shortbreak">Short break</label>-->
+<!--<input type="number" name="shortbreak" id="shortbreak"  min="0" max="180" value="05">-->
+
+<!--<label for="longbreak">Long break</label>-->
+<!--<input type="number" name="longbreak" id="longbreak"  min="0" max="180" value="15">-->
+
+<!--<button id="btnTest">Test</button>-->
 
 
 <script src="pomodoro.js"></script>
