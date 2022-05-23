@@ -9,40 +9,40 @@
 
 <div class="cloud-animation">
     <div class="n1">
-        <div class="cloud"></div>
+        <div class="cloud"><img src="img/clouds.png" alt="cloud"></div>
     </div>
     <div class="n2">
-        <div class="cloud"></div>
+        <div class="cloud"><img src="img/clouds.png" alt="cloud"></div>
     </div>
     <div class="n3">
-        <div class="cloud"></div>
+        <div class="cloud"><img src="img/clouds.png" alt="cloud"></div>
     </div>
     <div class="n4">
-        <div class="cloud"></div>
+        <div class="cloud"><img src="img/clouds.png" alt="cloud"></div>
     </div>
     <div class="n5">
-        <div class="cloud"></div>
+        <div class="cloud"><img src="img/clouds.png" alt="cloud"></div>
     </div>
 </div>
 
-<div class="pomo-container">
+<div class="pomo-container" draggable="true" id="drag">
 
     <div class="pomo-title">
 
         <div class="pomo-status">
             pomodoro
         </div>
-        <div class="btn hide">_</div>
-        <div class="btn open">&#9633;</div>
-        <div class="btn close">X</div>
+        <div class="btn shadow-btn hide">_</div>
+        <div class="btn shadow-btn open">&#9633;</div>
+        <div class="btn shadow-btn close">X</div>
 
     </div>
 
 
     <div class="pomo-options">
-        <button id="pomodoro"><span>P</span>omodoro</button>
-        <button id="short-break"><span>S</span>hort break</button>
-        <button id="long-break"><span>L</span>ong break</button>
+        <button id="pomodoro"><u>P</u>omodoro</button>
+        <button id="short-break"><u>S</u>hort break</button>
+        <button id="long-break"><u>L</u>ong break</button>
     </div>
 
     <div class="pomo-body">
@@ -50,16 +50,15 @@
         <p id="timer"></p>
 
         <div class="btn-timer">
-            <button id="btnStart">Start</button>
-            <button id="btnPause">Pause</button>
-            <button id="btnReset">Reset</button>
+            <button id="btnStart" class="shadow-btn">Start</button>
+            <button id="btnPause" class="shadow-btn">Pause</button>
+            <button id="btnReset" class="shadow-btn">Reset</button>
         </div>
     </div>
 
 </div>
 
-
-<!--<label for="pomo">Pomodoro</label>-->
+ <!--<label for="pomo">Pomodoro</label>-->
 <!--<input type="number" name="pomo" id="pomo"  min="0" max="180" value="25">-->
 
 <!--<label for="shortbreak">Short break</label>-->
@@ -72,6 +71,7 @@
 
 
 <script src="pomodoro.js"></script>
+<script src="drag-and-drop.js"></script>
 
 </body>
 </html>

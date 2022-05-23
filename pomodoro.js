@@ -13,20 +13,25 @@ const pomoStatus = document.querySelector(".pomo-status");
 const shortBreakBtn = document.getElementById('short-break');
 let pomodoroInput, shortBreakInput, longBreakInput;
 const longBreakBtn = document.getElementById('long-break');
+let title = document.querySelector("title");
 var startTimer, status=0;
 
 function displayTimer(x){
     if (timer[x][1]<=9 && timer[x][2]<=9 && timer[x][2]>0){
         timerDOM.innerText="0" + timer[x][1] + ":0" + timer[x][2];
+        title.innerText="0" + timer[x][1] + ":0" + timer[x][2];
     }
     else if (timer[x][2]<=9 && timer[x][2]>0) {
         timerDOM.innerText=timer[x][1] + ":0" + timer[x][2];
+        title.innerText=timer[x][1] + ":0" + timer[x][2];
     }
     else if (timer[x][1]<=9){
         timerDOM.innerText= "0" + timer[x][1] + ":" + timer[x][2];
+        title.innerText= "0" + timer[x][1] + ":" + timer[x][2];
     }
     else {
         timerDOM.innerText=timer[x][1] + ":" + timer[x][2];
+        title.innerText=timer[x][1] + ":" + timer[x][2];
     }
 
 }
@@ -53,7 +58,7 @@ function stopInterval(){
 
 startBtn.addEventListener('click',()=>{
     if (startTimer === undefined){
-        startTimer = setInterval(timerFctn, 100);
+        startTimer = setInterval(timerFctn, 1000);
     } else {
         alert("timer is running");
     }
@@ -104,18 +109,15 @@ longBreakBtn.addEventListener("click",()=>{
     pomoStatus.innerHTML = "long break";
 })
 
-function getValues(){
-    shortBreakInput = document.getElementById("shortbreak").value;
-    longBreakInput = document.getElementById("longbreak").value;
-    pomodoroInput = document.getElementById("pomo").value;
-}
-document.querySelector("#btnTest").addEventListener("click",()=>{
-    getValues();
-    timer[0][1]=pomodoroInput;
-    timer[0][2]="00";
-    timer[1][1]=shortBreakInput;
-    timer[1][2]="00";
-    timer[2][1]=longBreakInput;
-    timer[2][2]="00";
-    displayTimer(status);
-})
+
+// t
+// document.querySelector("#btnTest").addEventListener("click",()=>{
+//     getValues();
+//     timer[0][1]=pomodoroInput;
+//     timer[0][2]="00";
+//     timer[1][1]=shortBreakInput;
+//     timer[1][2]="00";
+//     timer[2][1]=longBreakInput;
+//     timer[2][2]="00";
+//     displayTimer(status);
+// })
